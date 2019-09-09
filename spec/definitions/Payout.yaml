@@ -35,7 +35,7 @@ properties:
     format: int64
     minimum: 0
   currency:
-    x-merge-properties:
+    x-merge-obj:
       - $ref: '#/definitions/Currency'
   payoutToolDetails:
     $ref: '#/definitions/PayoutToolDetails'

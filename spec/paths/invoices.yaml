@@ -96,12 +96,12 @@ get:
       type: string
       maxLength: 40
       minLength: 1
-    - x-merge-properties:
+    - x-merge-obj:
       - name: bankCardTokenProvider
         in: query
         required: false
       - $ref: '#/definitions/BankCardTokenProvider'
-    - x-merge-properties:
+    - x-merge-obj:
       - name: bankCardPaymentSystem
         in: query
         required: false
@@ -145,7 +145,7 @@ get:
       type: array
       items:
         type: string
-    - x-merge-properties:
+    - x-merge-obj:
       - name: continuationToken
         in: query
         required: false
@@ -157,7 +157,7 @@ get:
         type: object
         properties:
           continuationToken:
-            x-merge-properties:
+            x-merge-obj:
               - $ref: '#/definitions/ContinuationToken'
           result:
             type: array

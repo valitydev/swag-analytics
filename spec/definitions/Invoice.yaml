@@ -33,7 +33,7 @@ allOf:
         format: int64
         minimum: 1
       currency:
-        x-merge-properties:
+        x-merge-obj:
           - $ref: '#/definitions/Currency'
       product:
         description: Наименование предлагаемых товаров или услуг

@@ -47,7 +47,7 @@ get:
       type: array
       items:
         type: string
-    - x-merge-properties:
+    - x-merge-obj:
       - name: continuationToken
         in: query
         required: false
@@ -61,7 +61,7 @@ get:
           totalCount:
             type: integer
           continuationToken:
-            x-merge-properties:
+            x-merge-obj:
               - $ref: '#/definitions/ContinuationToken'
           result:
             type: array
