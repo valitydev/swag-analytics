@@ -1,5 +1,5 @@
 {
-  "name": "RBKmoney-analyrics-api-spec",
+  "name": "RBKmoney-analytics-api-spec",
   "version": "0.0.1",
   "dependencies": {
     "bower": "^1.7.7",
