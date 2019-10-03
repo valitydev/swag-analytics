@@ -40,8 +40,8 @@ properties:
   partyID:
     description: Идентификатор участника
     type: string
-    maxLength: 32
-    minLength: 32
+    maxLength: 40
+    minLength: 1
   shopID:
     description: Идентификатор магазина
     type: string
