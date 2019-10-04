@@ -7,8 +7,6 @@ get:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
     - $ref: '#/parameters/reportID'
-    - $ref: '#/parameters/partyID'
-    - $ref: '#/parameters/shopID'
   responses:
     '200':
       description: Найденный отчет
