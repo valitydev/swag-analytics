@@ -6,7 +6,7 @@ required:
   - settlementID
 properties:
   currency:
-    x-rebillyMerge:
+    x-merge-obj:
       - $ref: '#/definitions/Currency'
   guaranteeID:
     type: integer
