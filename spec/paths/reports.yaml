@@ -1,5 +1,7 @@
 post:
-  description: Сгенерировать отчет с указанным типом по магазину за указанный промежуток времени
+  description: >-
+    Сгенерировать отчет с указанным типом по магазину за указанный промежуток
+    времени
   tags:
     - Reports
   operationId: createReport
@@ -16,8 +18,6 @@ post:
       description: Отчет создан
       schema:
         $ref: '#/definitions/Report'
-    '401':
-      $ref: '#/responses/Unauthorized'
     '400':
       description: Ошибочные данные для генерации
       schema:
@@ -37,13 +37,14 @@ post:
           message:
             description: Человекочитаемое описание ошибки
             type: string
-            example: "Invalid shop id"
-
+            example: Invalid shop id
+    '401':
+      $ref: '#/responses/Unauthorized'
 get:
   description: Получить список отчетов по данному магазину за период
   tags:
     - Reports
-  operationId: getReports
+  operationId: searchReports
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
@@ -61,15 +62,24 @@ get:
           - paymentRegistry
     - $ref: '#/parameters/partyID'
     - $ref: '#/parameters/shopID'
+    - x-merge-obj:
+      - name: continuationToken
+        in: query
+        required: false
+      - $ref: '#/definitions/ContinuationToken'
   responses:
     '200':
       description: Найденные отчеты
       schema:
-        type: array
-        items:
-          $ref: '#/definitions/Report'
-    '401':
-      $ref: '#/responses/Unauthorized'
+        type: object
+        properties:
+          continuationToken:
+            x-merge-obj:
+              - $ref: '#/definitions/ContinuationToken'
+          result:
+            type: array
+            items:
+              $ref: '#/definitions/Report'
     '400':
       description: Ошибочные данные для получения
       schema:
@@ -89,4 +99,6 @@ get:
           message:
             description: Человекочитаемое описание ошибки
             type: string
-            example: "Max limit: 1000"
+            example: 'Max limit: 1000'
+    '401':
+      $ref: '#/responses/Unauthorized'
