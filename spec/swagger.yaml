@@ -279,7 +279,6 @@ parameters:
     required: true
     type: string
     enum:
-      - provisionOfService
       - paymentRegistry
   reportID:
     name: reportID
