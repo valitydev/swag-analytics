@@ -10,7 +10,13 @@ post:
     - $ref: '#/parameters/deadline'
     - $ref: '#/parameters/fromTime'
     - $ref: '#/parameters/toTime'
-    - $ref: '#/parameters/reportType'
+    - name: reportType
+      in: query
+      description: Тип отчета
+      required: true
+      type: string
+      enum:
+        - paymentRegistry
     - $ref: '#/parameters/partyID'
     - $ref: '#/parameters/shopID'
   responses:
@@ -58,6 +64,7 @@ get:
       items:
         type: string
         enum:
+          - provisionOfService
           - paymentRegistry
     - $ref: '#/parameters/partyID'
     - $ref: '#/parameters/shopID'

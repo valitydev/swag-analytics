@@ -35,6 +35,7 @@ properties:
     description: Тип отчета
     type: string
     enum:
+      - provisionOfService
       - paymentRegistry
   partyID:
     description: Идентификатор участника
