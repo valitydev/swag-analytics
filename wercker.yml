@@ -7,10 +7,6 @@ build:
     - script:
       name: build docsite
       code: npm run build -- ${WERCKER_OUTPUT_DIR}
-  after-steps:
-    - slack-notifier:
-      url: ${SLACK_WEBHOOK_URL}
-      username: "wercker"
 
 dev:
   steps:
@@ -28,10 +24,6 @@ release-epic:
       branch: release/${WERCKER_GIT_BRANCH}
       basedir: out
       message: Epic release ${WERCKER_GIT_OWNER}/${WERCKER_GIT_REPOSITORY}@${WERCKER_GIT_COMMIT}
-  after-steps:
-    - slack-notifier:
-      url: ${SLACK_WEBHOOK_URL}
-      username: "wercker"
 
 release-v:
   steps:
@@ -43,7 +35,9 @@ release-v:
       branch: release/${WERCKER_GIT_BRANCH}
       basedir: out
       message: Release ${WERCKER_GIT_OWNER}/${WERCKER_GIT_REPOSITORY}@${WERCKER_GIT_COMMIT}
-  after-steps:
-    - slack-notifier:
-      url: ${SLACK_WEBHOOK_URL}
-      username: "wercker"
+
+deploy:
+  steps:
+    - lukevivier/gh-pages:
+      repo: rbkmoney/anapi
+      token: ${GITHUB_API_TOKEN}
