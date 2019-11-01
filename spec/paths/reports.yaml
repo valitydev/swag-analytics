@@ -17,7 +17,6 @@ post:
       type: string
       enum:
         - paymentRegistry
-    - $ref: '#/parameters/partyID'
     - $ref: '#/parameters/shopID'
   responses:
     '201':
@@ -66,7 +65,6 @@ get:
         enum:
           - provisionOfService
           - paymentRegistry
-    - $ref: '#/parameters/partyID'
     - $ref: '#/parameters/shopID'
     - x-merge-obj:
       - name: continuationToken
