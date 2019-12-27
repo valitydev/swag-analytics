@@ -123,9 +123,16 @@ get:
         in: query
         required: false
       - $ref: '#/definitions/BankCardPaymentSystem'
-    - name: paymentAmount
+    - name: paymentAmountFrom
       in: query
-      description: Сумма платежа
+      description: Минимальная сумма платежа
+      required: false
+      type: integer
+      format: int64
+      minimum: 1
+    - name: paymentAmountTo
+      in: query
+      description: Максимальная сумма платежа
       required: false
       type: integer
       format: int64
