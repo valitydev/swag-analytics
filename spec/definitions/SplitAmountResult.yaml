@@ -1,0 +1,16 @@
+type: object
+required:
+  - splitUnit
+  - currency
+  - offsetAmounts
+properties:
+  splitUnit:
+    x-merge-obj:
+      - $ref: '#/definitions/SplitUnit'
+  currency:
+    x-merge-obj:
+      - $ref: '#/definitions/Currency'
+  offsetAmounts:
+    type: array
+    items:
+      $ref: '#/definitions/OffsetAmount'

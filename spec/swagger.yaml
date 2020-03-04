@@ -264,6 +264,14 @@ parameters:
     type: string
     maxLength: 40
     minLength: 1
+  partyID:
+    name: partyID
+    in: path
+    description: Идентификатор пати
+    required: true
+    type: string
+    maxLength: 40
+    minLength: 1
   reportType:
     name: reportType
     in: query
@@ -366,3 +374,7 @@ tags:
       ЭЦП](http://minsvyaz.ru/ru/appeals/faq/31/). Данная подпись является
       юридически значимой и позволяет полностью отказаться от бумажного
       документооборота.
+  - name: Analitics
+    x-displayName: Аналитика
+    description: >
+      Аналитические методы по статистике платежей
