@@ -1,15 +1,12 @@
 get:
-  description: Получение списка оборотов с группировкой по валютам
+  description: Получение текущего баланса по магазину
   tags:
     - Analytics
-  operationId: getPaymentsAmount
+  operationId: getCurrentBalances
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
     - $ref: '#/parameters/shopID'
-    - $ref: '#/parameters/partyID'
-    - $ref: '#/parameters/fromTime'
-    - $ref: '#/parameters/toTime'
   responses:
     '200':
       description: Список оборотов с группировкой по валютам

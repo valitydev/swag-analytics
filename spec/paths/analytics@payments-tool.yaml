@@ -1,25 +1,24 @@
 get:
-  description: Получение среднего размера платежа с группировкой по валютам
+  description: Получение распределения использования платежных инструментов
   tags:
     - Analytics
-  operationId: getAveragePayment
+  operationId: getPaymentsToolDistribution
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
-    - $ref: '#/parameters/partyID'
     - $ref: '#/parameters/shopID'
     - $ref: '#/parameters/fromTime'
     - $ref: '#/parameters/toTime'
   responses:
     '200':
-      description: Средний размер платежа с группировкой по валютам
+      description: Распределение использования платежных инструментов
       schema:
         type: object
         properties:
           result:
             type: array
             items:
-              $ref: '#/definitions/AmountResult'
+              $ref: '#/definitions/PaymentsToolDistributionResult'
     '404':
       $ref: '#/responses/NotFound'
     '401':

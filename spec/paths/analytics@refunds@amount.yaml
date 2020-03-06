@@ -1,25 +1,24 @@
 get:
-  description: Получение распределения использования платежных инструментов
+  description: Получение списка возвратов с группировкой по валютам
   tags:
     - Analytics
-  operationId: getPaymentsToolDistribution
+  operationId: getRefundsAmount
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
-    - $ref: '#/parameters/partyID'
     - $ref: '#/parameters/shopID'
     - $ref: '#/parameters/fromTime'
     - $ref: '#/parameters/toTime'
   responses:
     '200':
-      description: Распределение использования платежных инструментов
+      description: Список возвратов с группировкой по валютам
       schema:
         type: object
         properties:
           result:
             type: array
             items:
-              $ref: '#/definitions/PaymentsToolDistributionResult'
+              $ref: '#/definitions/AmountResult'
     '404':
       $ref: '#/responses/NotFound'
     '401':

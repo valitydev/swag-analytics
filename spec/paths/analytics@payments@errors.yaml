@@ -1,25 +1,24 @@
 get:
-  description: Получение списка возвратов с группировкой по валютам
+  description: Получение распределения ошибок
   tags:
     - Analytics
-  operationId: getRefundsAmount
+  operationId: getPaymentsErrorDistribution
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
-    - $ref: '#/parameters/partyID'
     - $ref: '#/parameters/shopID'
     - $ref: '#/parameters/fromTime'
     - $ref: '#/parameters/toTime'
   responses:
     '200':
-      description: Список возвратов с группировкой по валютам
+      description: Распределение ошибок
       schema:
         type: object
         properties:
           result:
             type: array
             items:
-              $ref: '#/definitions/AmountResult'
+              $ref: '#/definitions/PaymentsErrorsDistributionResult'
     '404':
       $ref: '#/responses/NotFound'
     '401':

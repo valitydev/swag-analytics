@@ -1,25 +1,24 @@
 get:
-  description: Получение колличества платежей с группировкой по валютам
+  description: Получение среднего размера платежа с группировкой по валютам
   tags:
     - Analytics
-  operationId: getPaymentsCount
+  operationId: getAveragePayment
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
-    - $ref: '#/parameters/partyID'
     - $ref: '#/parameters/shopID'
     - $ref: '#/parameters/fromTime'
     - $ref: '#/parameters/toTime'
   responses:
     '200':
-      description: Средний колличества платежей с группировкой по валютам
+      description: Средний размер платежа с группировкой по валютам
       schema:
         type: object
         properties:
           result:
             type: array
             items:
-              $ref: '#/definitions/CountResult'
+              $ref: '#/definitions/AmountResult'
     '404':
       $ref: '#/responses/NotFound'
     '401':

@@ -1,23 +1,24 @@
 get:
-  description: Получение текущего баланса по магазину
+  description: Получение колличества платежей с группировкой по валютам
   tags:
     - Analytics
-  operationId: getCurrentBalances
+  operationId: getPaymentsCount
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
-    - $ref: '#/parameters/partyID'
     - $ref: '#/parameters/shopID'
+    - $ref: '#/parameters/fromTime'
+    - $ref: '#/parameters/toTime'
   responses:
     '200':
-      description: Список оборотов с группировкой по валютам
+      description: Средний колличества платежей с группировкой по валютам
       schema:
         type: object
         properties:
           result:
             type: array
             items:
-              $ref: '#/definitions/AmountResult'
+              $ref: '#/definitions/CountResult'
     '404':
       $ref: '#/responses/NotFound'
     '401':

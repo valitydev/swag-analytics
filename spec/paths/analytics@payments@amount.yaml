@@ -1,25 +1,24 @@
 get:
-  description: Получение распределения ошибок
+  description: Получение списка оборотов с группировкой по валютам
   tags:
     - Analytics
-  operationId: getPaymentsErrorDistribution
+  operationId: getPaymentsAmount
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
-    - $ref: '#/parameters/partyID'
     - $ref: '#/parameters/shopID'
     - $ref: '#/parameters/fromTime'
     - $ref: '#/parameters/toTime'
   responses:
     '200':
-      description: Распределение ошибок
+      description: Список оборотов с группировкой по валютам
       schema:
         type: object
         properties:
           result:
             type: array
             items:
-              $ref: '#/definitions/PaymentsErrorsDistributionResult'
+              $ref: '#/definitions/AmountResult'
     '404':
       $ref: '#/responses/NotFound'
     '401':
