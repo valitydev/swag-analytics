@@ -11,5 +11,5 @@ allOf:
       percents:
         description: Относительное колличество ошибок в процентах
         type: integer
-        format: int32
+        format: int64
         minimum: 0

@@ -14,5 +14,5 @@ properties:
     offset:
       description: 'Номер интервала в списке'
       type: integer
-      format: int32
+      format: int64
       minimum: 0

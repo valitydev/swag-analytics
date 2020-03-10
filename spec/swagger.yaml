@@ -264,6 +264,14 @@ parameters:
     type: string
     maxLength: 40
     minLength: 1
+  shopIDs:
+    name: shopIDs
+    in: query
+    description: Идентификаторы магазинов
+    required: false
+    type: array
+    items:
+      type: string
   partyID:
     name: partyID
     in: path
