@@ -66,6 +66,7 @@ get:
           - provisionOfService
           - paymentRegistry
     - $ref: '#/parameters/shopID'
+    - $ref: '#/parameters/shopIDs'
     - x-merge-obj:
       - name: continuationToken
         in: query
