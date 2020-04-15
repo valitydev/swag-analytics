@@ -10,6 +10,6 @@ allOf:
         type: string
       percents:
         description: Относительное колличество ошибок в процентах
-        type: integer
-        format: int64
+        type: number
+        format: double
         minimum: 0
