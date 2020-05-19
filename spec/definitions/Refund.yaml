@@ -6,6 +6,7 @@ allOf:
       - createdAt
       - amount
       - currency
+      - shopID
     properties:
       id:
         description: Идентификатор возврата
@@ -27,5 +28,8 @@ allOf:
           - $ref: '#/definitions/Currency'
       reason:
         description: Причина осуществления возврата
+        type: string
+      shopID:
+        description: Идентификатор магазина
         type: string
   - $ref: '#/definitions/RefundStatus'
