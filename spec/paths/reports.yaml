@@ -65,6 +65,7 @@ get:
         enum:
           - provisionOfService
           - paymentRegistry
+          - paymentRegistryByPayout
     - $ref: '#/parameters/shopID'
     - $ref: '#/parameters/shopIDs'
     - x-merge-obj:

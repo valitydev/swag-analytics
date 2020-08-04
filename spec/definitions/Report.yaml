@@ -37,6 +37,7 @@ properties:
     enum:
       - provisionOfService
       - paymentRegistry
+      - paymentRegistryByPayout
   partyID:
     description: Идентификатор участника
     type: string
