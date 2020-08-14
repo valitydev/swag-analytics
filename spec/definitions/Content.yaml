@@ -3,7 +3,7 @@ properties:
   type:
     description: Тип данных
     type: string
-  category:
+  data:
     description: Данные
     type: string
     format: byte
