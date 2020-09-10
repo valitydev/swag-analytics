@@ -272,6 +272,14 @@ parameters:
     type: array
     items:
       type: string
+  excludeShopIDs:
+    name: excludeShopIDs
+    in: query
+    description: Идентификаторы магазинов не включаемые в запрос
+    required: false
+    type: array
+    items:
+      type: string
   partyID:
     name: partyID
     in: path
