@@ -33,6 +33,13 @@ get:
       type: string
       maxLength: 40
       minLength: 1
+    - name: externalID
+      in: query
+      description: Внешний идентификатор
+      required: false
+      type: string
+      maxLength: 40
+      minLength: 1
     - name: refundStatus
       in: query
       description: Статус возврата

@@ -14,6 +14,9 @@ allOf:
       id:
         description: Идентификатор инвойса
         type: string
+      externalID:
+        description: Внешний идентификатор
+        type: string
       shopID:
         description: Идентификатор магазина
         type: string

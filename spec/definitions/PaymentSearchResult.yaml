@@ -20,6 +20,9 @@ allOf:
       invoiceID:
         description: 'Идентификатор инвойса, в рамках которого был создан платеж'
         type: string
+      externalID:
+        description: Внешний идентификатор
+        type: string
       shopID:
         description: 'Идентификатор магазина, в рамках которого был создан платеж'
         type: string

@@ -11,6 +11,9 @@ allOf:
       id:
         description: Идентификатор возврата
         type: string
+      externalID:
+        description: Внешний идентификатор
+        type: string
       createdAt:
         description: Дата и время осуществления
         type: string
