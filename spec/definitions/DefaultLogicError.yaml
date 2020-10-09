@@ -9,6 +9,7 @@ properties:
     type: string
     enum:
       - invalidRequest
+      - ambiguousPartyID
       - invalidDeadline
   message:
     description: Человекочитаемое описание ошибки

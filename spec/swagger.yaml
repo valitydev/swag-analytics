@@ -140,6 +140,14 @@ parameters:
     type: string
     maxLength: 40
     minLength: 1
+  partyIDQuery:
+    name: partyID
+    in: query
+    description: Уникальный идентификатор участника в рамках платформы
+    required: false
+    type: string
+    maxLength: 40
+    minLength: 1
   paymentID:
     name: paymentID
     in: path
@@ -256,14 +264,6 @@ parameters:
     type: string
     maxLength: 40
     minLength: 1
-  shopID:
-    name: shopID
-    in: query
-    description: Идентификатор магазина
-    required: false
-    type: string
-    maxLength: 40
-    minLength: 1
   shopIDs:
     name: shopIDs
     in: query
@@ -280,14 +280,6 @@ parameters:
     type: array
     items:
       type: string
-  partyID:
-    name: partyID
-    in: path
-    description: Идентификатор пати
-    required: true
-    type: string
-    maxLength: 40
-    minLength: 1
   reportType:
     name: reportType
     in: query
@@ -341,7 +333,8 @@ tags:
 
         | Код                              | Описание                                                                                                                              |
         | ---                              | --------                                                                                                                              |
-        | **invalidDeadline**              | Неверный формат времени.                                                                                                       |
+        | **invalidDeadline**              | Неверный формат максимального времени обработки запроса.                                                                              |
+        | **ambiguousPartyID**             | Невозможно однозначно определить идентификатор участника, укажите идентификатор в запросе явно.                                       |
         | **invalidRequest**               | Прочие неверные данные запроса.                                                                                                       |
 
       ## Общие ошибки

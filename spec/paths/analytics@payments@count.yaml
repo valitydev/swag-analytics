@@ -1,18 +1,19 @@
 get:
-  description: Получение колличества платежей с группировкой по валютам
+  description: Получение количества платежей с группировкой по валютам
   tags:
     - Analytics
   operationId: getPaymentsCount
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
+    - $ref: '#/parameters/partyIDQuery'
     - $ref: '#/parameters/shopIDs'
     - $ref: '#/parameters/excludeShopIDs'
     - $ref: '#/parameters/fromTime'
     - $ref: '#/parameters/toTime'
   responses:
     '200':
-      description: Средний колличества платежей с группировкой по валютам
+      description: Среднее количество платежей с группировкой по валютам
       schema:
         type: object
         properties:

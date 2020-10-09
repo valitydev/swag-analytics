@@ -8,6 +8,8 @@ post:
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
+    - $ref: '#/parameters/partyIDQuery'
+    - $ref: '#/parameters/shopIDQuery'
     - $ref: '#/parameters/fromTime'
     - $ref: '#/parameters/toTime'
     - name: reportType
@@ -17,7 +19,6 @@ post:
       type: string
       enum:
         - paymentRegistry
-    - $ref: '#/parameters/shopID'
   responses:
     '201':
       description: Отчет создан
@@ -36,6 +37,7 @@ post:
               [Код ошибки](#tag/Error-Codes)
             type: string
             enum:
+              - ambiguousPartyID
               - invalidShopID
               - invalidRequest
               - invalidDeadline
@@ -53,6 +55,9 @@ get:
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
+    - $ref: '#/parameters/partyIDQuery'
+    - $ref: '#/parameters/shopIDQuery'
+    - $ref: '#/parameters/shopIDs'
     - $ref: '#/parameters/fromTime'
     - $ref: '#/parameters/toTime'
     - name: reportTypes
@@ -66,8 +71,6 @@ get:
           - provisionOfService
           - paymentRegistry
           - paymentRegistryByPayout
-    - $ref: '#/parameters/shopID'
-    - $ref: '#/parameters/shopIDs'
     - x-merge-obj:
       - name: continuationToken
         in: query
@@ -99,6 +102,7 @@ get:
               [Код ошибки](#tag/Error-Codes)
             type: string
             enum:
+              - ambiguousPartyID
               - limitExceeded
               - invalidRequest
               - invalidDeadline

@@ -1,11 +1,12 @@
 get:
-  description: Получение колличества платежей с группировкой по валютам и статусам, разделенные по временным интервалам
+  description: Получение количества платежей с группировкой по валютам и статусам, разделенного по временным интервалам
   tags:
     - Analytics
   operationId: getPaymentsSplitCount
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
+    - $ref: '#/parameters/partyIDQuery'
     - $ref: '#/parameters/shopIDs'
     - $ref: '#/parameters/excludeShopIDs'
     - $ref: '#/parameters/fromTime'
@@ -13,7 +14,7 @@ get:
     - $ref: '#/parameters/splitUnit'
   responses:
     '200':
-      description: Колличество платежей с группировкой по валютам и статусам, разделенные по временным интервалам
+      description: Количество платежей с группировкой по валютам и статусам, разделенное по временным интервалам
       schema:
         type: object
         properties:
