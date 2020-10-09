@@ -9,6 +9,7 @@ get:
     - $ref: '#/parameters/partyIDQuery'
     - $ref: '#/parameters/shopIDs'
     - $ref: '#/parameters/excludeShopIDs'
+    - $ref: '#/parameters/paymentInstitutionRealm'
     - $ref: '#/parameters/fromTime'
     - $ref: '#/parameters/toTime'
   responses:

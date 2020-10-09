@@ -304,6 +304,15 @@ parameters:
     type: string
     maxLength: 40
     minLength: 1
+  paymentInstitutionRealm:
+    name: paymentInstitutionRealm
+    in: query
+    description: Тип магазина, тестовый или «боевой»
+    required: false
+    type: string
+    enum:
+      - live
+      - test
 tags:
   - name: Search
     x-displayName: Поиск

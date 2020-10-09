@@ -58,6 +58,7 @@ get:
     - $ref: '#/parameters/partyIDQuery'
     - $ref: '#/parameters/shopIDQuery'
     - $ref: '#/parameters/shopIDs'
+    - $ref: '#/parameters/paymentInstitutionRealm'
     - $ref: '#/parameters/fromTime'
     - $ref: '#/parameters/toTime'
     - name: reportTypes
