@@ -106,6 +106,7 @@ get:
               - ambiguousPartyID
               - limitExceeded
               - invalidRequest
+              - invalidPartyID
               - invalidDeadline
           message:
             description: Человекочитаемое описание ошибки

@@ -11,6 +11,7 @@ properties:
       - invalidRequest
       - ambiguousPartyID
       - invalidDeadline
+      - invalidPartyID
   message:
     description: Человекочитаемое описание ошибки
     type: string
