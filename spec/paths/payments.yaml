@@ -13,6 +13,13 @@ get:
     - $ref: '#/parameters/fromTime'
     - $ref: '#/parameters/toTime'
     - $ref: '#/parameters/limit'
+    - name: invoiceIDs
+      in: query
+      description: Список инвойсов
+      required: false
+      type: array
+      items:
+        type: string
     - name: paymentStatus
       in: query
       description: Статус платежа для поиска
