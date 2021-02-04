@@ -61,6 +61,7 @@ get:
     - $ref: '#/parameters/paymentInstitutionRealm'
     - $ref: '#/parameters/fromTime'
     - $ref: '#/parameters/toTime'
+    - $ref: '#/parameters/limit'
     - name: reportTypes
       description: Типы отчетов
       in: query
