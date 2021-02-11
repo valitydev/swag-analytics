@@ -1,11 +1,11 @@
 box:
-  id: node:7
+  id: node:14
   username: ${DOCKER_ID}
   password: ${DOCKER_PWD}
 
 build:
   steps:
-    - npm-install
+    - mvandervliet/npm-ci
     - npm-test
     - script:
       name: build docsite
@@ -13,7 +13,7 @@ build:
 
 dev:
   steps:
-    - npm-install
+    - mvandervliet/npm-ci
     - npm-test
     - internal/shell
 
