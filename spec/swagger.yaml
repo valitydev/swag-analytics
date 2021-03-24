@@ -150,7 +150,7 @@ parameters:
     name: partyID
     in: query
     description: Уникальный идентификатор участника в рамках платформы
-    required: false
+    required: true
     type: string
     maxLength: 40
     minLength: 1
