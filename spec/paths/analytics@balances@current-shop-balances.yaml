@@ -8,6 +8,7 @@ get:
     - $ref: '#/parameters/deadline'
     - $ref: '#/parameters/shopIDs'
     - $ref: '#/parameters/excludeShopIDs'
+    - $ref: '#/parameters/partyIDQuery'
   responses:
     '200':
       description: Список балансов с группировкой по магазинам
