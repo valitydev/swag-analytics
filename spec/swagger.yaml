@@ -1,17 +1,17 @@
 swagger: '2.0'
 info:
   version: 1.0.0
-  title: RBKmoney Platform Analytics API
+  title: Valitydev Platform Analytics API
   description: >
     ## Описание
 
-    RBKmoney Analytics API является точкой взаимодействия с
+    Valitydev Analytics API является точкой взаимодействия с
     аналитической и поисковой частью платформы. Все аналитическоие запросы осуществляются с
     помощью вызовов соответствующих методов API. Любые сторонние приложения,
     включая наши веб-сайты, личные кабинеты и другие UI-интерфейсы являются внешними
     приложениями-клиентами.
 
-    RBKmoney Analytics API работает поверх HTTP-протокола. Мы используем REST архитектуру,
+    Valitydev Analytics API работает поверх HTTP-протокола. Мы используем REST архитектуру,
     схема описывается в соответствии со [Swagger](http://swagger.io/). Коды
     возврата описываются соответствующими HTTP-статусами. Платформа принимает и
     возвращает JSON-структуры в HTTP body.
@@ -70,12 +70,7 @@ info:
     API предоставляет несколько различных критериев для выбора магазинов, в рамках которых будет выполняться поиск или
     аналитика: `shopID`, `shopIDs`, `paymentInstitutionRealm`. В случае использования нескольких критериев одновременно
     в выборку будут включены магазины, подпадающие под хотя бы один из перечисленных критериев.
-  termsOfService: 'https://rbk.money/'
-  contact:
-    name: RBKmoney support team
-    email: support@rbk.money
-    url: 'https://api.rbk.money'
-host: api.rbk.money
+  termsOfService: 'https://vality.dev/'
 basePath: /lk/v1
 schemes:
   - https
@@ -88,7 +83,7 @@ securityDefinitions:
     type: apiKey
     name: Authorization
     in: header
-    description: >
+    description: |
       Для аутентификации вызовов мы используем [JWT](https://jwt.io).
       Cоответствующий ключ передается в заголовке.
 
@@ -96,9 +91,7 @@ securityDefinitions:
        Authorization: Bearer {JWT}
       ```
 
-      Посмотреть ваш API-ключ вы можете в [личном
-      кабинете](https://dashboard.rbk.money/).
-
+      Посмотреть ваш API-ключ вы можете в личном кабинете.
 
       Помните, что вы никому не должны передавать ваш API ключ!
 security:
