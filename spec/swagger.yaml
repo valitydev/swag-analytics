@@ -321,6 +321,7 @@ tags:
       выборку по определенным статусам.
   - name: Error Codes
     x-displayName: Коды ошибок
+    # yamllint disable rule:line-length
     description: >
 
       ## Ошибки бизнес-логики
@@ -383,6 +384,7 @@ tags:
 
       Если вы получили ошибку, которой нет в данном описании, обратитесь в
       техническую поддержку.
+    # yamllint enable
   - name: Reports
     x-displayName: Отчеты
     description: >
