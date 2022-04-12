@@ -71,10 +71,10 @@ get:
           - authorisation
           - processing_error
     - x-merge-obj:
-      - name: continuationToken
-        in: query
-        required: false
-      - $ref: '#/definitions/ContinuationToken'
+        - name: continuationToken
+          in: query
+          required: false
+        - $ref: '#/definitions/ContinuationToken'
   responses:
     '200':
       description: Найденные чарджбэки

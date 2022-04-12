@@ -10,4 +10,3 @@ allOf:
         type: string
         maxLength: 40
         minLength: 1
-

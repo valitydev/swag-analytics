@@ -70,5 +70,3 @@ properties:
     $ref: '#/definitions/ChargebackReason'
   content:
     $ref: '#/definitions/Content'
-
-
