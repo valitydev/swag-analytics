@@ -1,0 +1,8 @@
+description: |
+    Провайдер электронных денежных средств.
+
+    Дополнительные детали провайдера можно узнать, вызвав [справочную операцию](#operation/getServiceProviderByID).
+type: string
+example: qiwi
+# enum:
+#   - qiwi
